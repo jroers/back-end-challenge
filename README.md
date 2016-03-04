@@ -1,5 +1,13 @@
 #Back-end Challenge
 
+##Table of Contents
+1. [Purpose](#purpose)
+2. [Extra Information Provided](#extra-information-provided)
+3. [Steps to complete](#steps-to-complete)
+4. [Decisions Made](#decisions-made)
+5. [Endpoints](#api-endpoints)
+6. [How to use this?](#how-to-use-this)
+7. [Next Steps](#next-steps)
 
 ##Purpose
 
