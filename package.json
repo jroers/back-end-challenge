@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jroers/back-end-challenge/issues"
   },
-  "homepage": "https://github.com/jroers/back-end-challenge#readme"
+  "homepage": "https://github.com/jroers/back-end-challenge#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
