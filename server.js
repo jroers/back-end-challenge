@@ -86,8 +86,7 @@ app.get('/talks/:id', function (req, res) {
 	if (foundTalk) {
 		res.json(foundTalk);
 	} else {
-		res.status(404)
-			 .json("404 error: Not Found");
+		res.sendStatus(404);
 	}
 });
 
@@ -105,8 +104,7 @@ app.get('/attendees/:id', function (req, res) {
 	if (foundAttendee) {
 		res.json(foundAttendee);
 	} else {
-		res.status(404)
-		   .json("404 error: Not Found");
+		res.sendStatus(404);
 	}
 });
 
