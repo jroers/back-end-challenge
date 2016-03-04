@@ -6,6 +6,7 @@ var express = require('express'),
 
 var allTalks = [
   {
+  	"_id": 1,
     "title": "CILLUM NON",
     "abstract": "Aliqua consequat mollit Lorem dolor nulla qui sunt tempor veniam eiusmod ullamco quis commodo.",
     "room": 873,
@@ -17,18 +18,21 @@ var allTalks = [
     },
     "attendees": [
       {
+      	"_id": 1,
         "name": "Sanders Riley",
         "company": "Comtext",
         "email": "sandersriley@comtext.com",
         "registered": "2015-05-24T02:15:04 +07:00"
       },
       {
+      	"_id": 2,
         "name": "Bean Cline",
         "company": "Utarian",
         "email": "beancline@utarian.com",
         "registered": "2015-06-21T02:54:39 +07:00"
       },
       {
+      	"_id": 3,
         "name": "Alfreda Mitchell",
         "company": "Dreamia",
         "email": "alfredamitchell@dreamia.com",
@@ -37,6 +41,7 @@ var allTalks = [
     ]
   },
   {
+  	"_id": 2,
     "title": "AD IPSUM",
     "abstract": "Fugiat nisi et mollit consequat sint.",
     "room": 343,
