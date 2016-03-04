@@ -2,8 +2,75 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser');
 
+// PRE-SEEDED DATA - FROM DATA.JSON
+
+var allTalks = [
+  {
+    "title": "CILLUM NON",
+    "abstract": "Aliqua consequat mollit Lorem dolor nulla qui sunt tempor veniam eiusmod ullamco quis commodo.",
+    "room": 873,
+    "speaker": {
+      "name": "Hendrix Carroll",
+      "company": "Songlines",
+      "email": "hendrixcarroll@songlines.com",
+      "bio": "Magna velit adipisicing ullamco sint duis nisi."
+    },
+    "attendees": [
+      {
+        "name": "Sanders Riley",
+        "company": "Comtext",
+        "email": "sandersriley@comtext.com",
+        "registered": "2015-05-24T02:15:04 +07:00"
+      },
+      {
+        "name": "Bean Cline",
+        "company": "Utarian",
+        "email": "beancline@utarian.com",
+        "registered": "2015-06-21T02:54:39 +07:00"
+      },
+      {
+        "name": "Alfreda Mitchell",
+        "company": "Dreamia",
+        "email": "alfredamitchell@dreamia.com",
+        "registered": "2015-09-22T06:35:29 +07:00"
+      }
+    ]
+  },
+  {
+    "title": "AD IPSUM",
+    "abstract": "Fugiat nisi et mollit consequat sint.",
+    "room": 343,
+    "speaker": {
+      "name": "Melody Juarez",
+      "company": "Zillatide",
+      "email": "melodyjuarez@zillatide.com",
+      "bio": "Veniam do eu quis officia enim."
+    },
+    "attendees": []
+  }
+];
+
+// This is an array that will be filled based on the information from the talks array
+var allAttendees = [];
+
+allTalks.forEach(function(talk) {
+	talk.attendees.forEach(function(attendee) {
+		allAttendees.push(attendee);
+	});
+});
+
+// API ENDPOINTS
+
 app.get('/', function (req, res) {
-	res.send("Hello world");
+	res.json("Welcome to the API");
+});
+
+app.get('/talks', function (req, res) {
+	res.json(allTalks);
+});
+
+app.get('/attendees', function (req, res) {
+	res.json(allAttendees);
 });
 
 app.listen(3000, function() {
